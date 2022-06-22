@@ -1,5 +1,6 @@
 # StarWarsSpaceshipFight
 Game StarWarsSpaceshipFight desenvolvido em python por Benhur Machado e Eduardo Rossatto
+
 Benhur = 1129890 / benhurteixeiramachado@gmail.com
 Eduardo = 1130400 / durossatto22@gmail.com
 
