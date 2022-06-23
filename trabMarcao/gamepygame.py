@@ -26,6 +26,12 @@ rajada = 3
 largura_nave = 50
 altura_nave = 38
 
+nome1 = input("Digite o nome do player 1: ")
+emailJogador1 = input("Digite o e-mail do player 1: ")
+
+nome2 = input("Digite o nome do player 2: ")
+emailJogador2 = input("Digite o e-mail do player 2: ")
+
 hit_a = pygame.USEREVENT + 1
 hit_v = pygame.USEREVENT + 2
 
@@ -35,6 +41,25 @@ imagem_navev = pygame.image.load(os.path.join('jogo', 'nave_v.png'))
 nave_v = pygame.transform.rotate(pygame.transform.scale(imagem_navev, (largura_nave, altura_nave)), 270)
 
 fundo = pygame.transform.scale(pygame.image.load(os.path.join('jogo', 'fundo.png')), (largura, altura))
+
+def jogo():
+    while True:
+        nome1
+        emailJogador1
+        nome2
+        emailJogador2
+        f = open("historico.txt", "a")
+        f.write("\n")
+        f.write(nome1)
+        f.write("\n")
+        f.write(emailJogador1)
+        f.write("\n")
+        f.write(nome2)
+        f.write("\n")
+        f.write(emailJogador2)
+        f.write("\n")
+        f.close()
+        break
 
 def hud_game(vermelho, amarelo, tiros_v, tiros_a, vidas_v, vidas_a):
     INI.blit(fundo, (0, 0))
@@ -161,6 +186,7 @@ def main():
         movi_tiros(tiros_a, tiros_v, amarelo, vermelho)
 
         hud_game(vermelho, amarelo, tiros_v, tiros_a, vidas_v, vidas_a)
+    jogo()
     main()
 
 if __name__ == "__main__":
